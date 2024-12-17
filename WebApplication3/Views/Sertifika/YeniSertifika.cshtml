@@ -1,0 +1,21 @@
+﻿@model WebApplication3.Models.Entity.TblSertifika
+
+@{
+    ViewBag.Title = "YeniSertifika";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Yeni Sertifika Ekleme Sayfası</h2>
+
+<br />
+<form method="post" class="form-control">
+
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+
+    <button type="submit" class="btn btn-info">Kaydet</button>
+</form>

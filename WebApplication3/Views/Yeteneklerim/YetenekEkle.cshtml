@@ -1,0 +1,25 @@
+﻿@model WebApplication3.Models.Entity.TblYeteneklerim
+@{
+    ViewBag.Title = "YetenekEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h4>Yeni Yetenek Ekleme Sayfası</h4>
+<br />
+<form method="post" class="form-control">
+
+    @Html.Label("Yetenek Açıklaması")
+    <br />
+
+    @Html.TextBoxFor(x => x.Yetenek, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Derece")
+    @Html.TextBoxFor(x => x.Oran, new { @class = "form-control" })
+    <br />
+
+
+    <button type="submit" class="btn btn-success">Kaydet</button>
+</form>
+
+

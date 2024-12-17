@@ -1,0 +1,29 @@
+﻿@model WebApplication3.Models.Entity.TblEgitim
+@{
+    ViewBag.Title = "EgitimDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4> Egitim Düzenleme Sayfası</h4>
+<br />
+<form method="post" class="form-control">
+
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Alt Başlık 1")
+    @Html.TextBoxFor(x => x.AltBaslik1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlık 2")
+    @Html.TextBoxFor(x => x.AltBaslik2, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.Label("Genel Not Ortalaması (GANO)")
+    @Html.TextBoxFor(x => x.GANO, new { @class = "form-control" })
+    <br />
+    <button type="submit" class="btn btn-success">Düzenle</button>
+</form>
